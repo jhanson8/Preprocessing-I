@@ -1,1 +1,297 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v16/7Auwp_0qiz-afTLGKA.ttf) format('truetype');
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  background-color: #bd9999;
+}
+@media (max-width: 500px) {
+  body {
+    width: 90%;
+  }
+}
+section {
+  padding: 0.3rem;
+}
+.container {
+  width: 90%;
+  margin: 40px auto;
+  font-family: 'Muli', sans-serif;
+}
+.container header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1.4px solid black;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .container header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container header h1 {
+  font-size: 3rem;
+  width: auto;
+}
+.container header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .container header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container header nav a {
+  color: navy;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+}
+.container .intro {
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  margin: 1%;
+  background: lightblue;
+  border-radius: 8px;
+}
+.container .intro h2 {
+  font-size: 2.2rem;
+  padding: auto;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: center;
+}
+.container .intro h3 {
+  font-size: 1.8rem;
+  padding: auto;
+  padding-bottom: 2%;
+  display: flex;
+  justify-content: center;
+}
+.container .intro p {
+  padding: auto;
+  font-size: 1.3rem;
+}
+.container .intro button {
+  display: flex;
+  justify-content: center;
+}
+.container .skills {
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  margin: 1%;
+  background: lightblue;
+  border-radius: 8px;
+  border: black 2px solid;
+  padding: 3%;
+}
+.container .skills h2 {
+  font-size: 1.8rem;
+  padding: auto;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: flex-start;
+}
+.container .skills ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .container .skills ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .skills li {
+  font-size: 1.7rem;
+}
+.container .work {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 8px;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  .container .work {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container .work .work1 {
+  padding: 3%;
+}
+.container .work .work2 {
+  padding: 3%;
+}
+.container .work .work3 {
+  padding: 3%;
+}
+.container .exp {
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Muli', sans-serif;
+  border-radius: 8px;
+  font-size: 2.3rem;
+}
+.container .contact {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: 'Muli', sans-serif;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+section {
+  border: black 2px solid;
+  padding: 3%;
+  background-color: lightblue;
+}
