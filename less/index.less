@@ -59,9 +59,24 @@ table {
 
 
 //variables
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+@navFont: 'Muli', sans-serif;
 @backgroundColor: rgb(189, 153, 153);
 @textColor: navy;
+
+//mixins 
+  .border(){
+	border:black 2px solid;
+	padding: 3%;
+  }
+
+  .backgroundColor(){
+	  background-color:lightblue;
+  }
+  
+
+
 
 html {
 	box-sizing: border-box;
@@ -71,6 +86,9 @@ html {
 
 body{
 	background-color:@backgroundColor;
+	@media (max-width:500px){
+		width:90%;
+	}
 }
 	
 
@@ -80,14 +98,12 @@ section{
 }
 
 .container{
-	width:80%;
+	width:90%;
 	margin: 40px auto;
+	font-family: @navFont;
 
-	@media (max-width:500px){
-		width: 100%;
-		padding: 20px;
-
-	}
+	
+	
 
 	header{
 		width:100%;
@@ -95,23 +111,42 @@ section{
 		justify-content: space-evenly;
 		align-items: center;
 		border-bottom: 1.4px solid black;
+		padding:2%;
+		@media(max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+		  }
+
+	
+		
 
 		h1{
 			font-size: 3rem;
 			width: auto;
+			
 		}
 
 	
 		nav{
-			width: 90%;
+			width: 100%;
 			display: flex;
 			justify-content: space-evenly;
+			@media(max-width: 500px) {
+				flex-direction: column;
+				align-items: center;
+			  }
+		
+
+		
+			
 			
 
 			a{
 			color:@textColor;
-			font-size: 1.6rem;
+			font-size: 1.8rem;
 			text-decoration: none;
+			font-family: 'Muli', sans-serif;
+			font-weight: bold;
 			}
 		
 
@@ -120,32 +155,132 @@ section{
 	
 	.intro{
 		padding:5%;
+		padding-top:2%;
+		padding-bottom: 5%;
 		margin: 1%;
 		background: lightblue;
 		border-radius: 8px;
-		display:flex;
-		flex-direction: column;
+		
+		
+		// border: 2px solid black;
+		
+		
 		
 		
 		h2{
 			font-size: 2.2rem;
-			padding:3%;
+			padding:auto;
 			padding-bottom: 1%;
+			display: flex;
+			justify-content: center;
 		}
 
 		h3{
 			font-size:1.8rem;
 			padding:auto;
 			padding-bottom:2%;
+			display: flex;
+			justify-content: center;
 		}
 		p{
 			padding:auto;
+			font-size:1.3rem;
 			
 			
 
 		}
+		button{
+			display: flex;
+			justify-content:center;
+		}
 
 	}
+	.skills{
+		padding:5%;
+		padding-top:2%;
+		padding-bottom: 5%;
+		margin: 1%;
+		background: lightblue;
+		border-radius: 8px;
+		// border: 2px solid black;
+		.border();
 	
+
+		
+		
+		h2{
+			font-size: 1.8rem;
+			padding:auto;
+			padding-bottom: 1%;
+			display: flex;
+			justify-content: flex-start;
+			
+
+		}
+		ul{
+			display:flex;
+			justify-content: space-evenly;
+			@media(max-width: 500px) {
+				flex-direction: column;
+				align-items: center;
+			  }
+	
+		
+		
+			
+		}
+		li{
+			font-size:1.7rem;
+		}
+
+		
+	}
+
+	.work{
+		display:flex;
+		justify-content: space-evenly;
+		border-radius:8px;
+		font-family: @navFont;
+		font-size: 1.2rem;
+
+		@media(max-width:500px){
+			display:flex;
+			flex-direction:column;
+		}
+		.work1{
+			padding:3%;
+		}
+		.work2{
+			padding:3%;
+		}
+		.work3{
+			padding:3%;
+		}
+	}
+	
+	.exp{
+		display: flex;
+		justify-content: flex-start;
+		font-family: @navFont;
+		border-radius: 8px;
+		font-size:2.3rem;
+	}
+	.contact{
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		font-family: @navFont;
+		border-radius: 8px;
+		font-size:1.5rem;
+
+	}
 }
+
+
+section{
+	.border();
+	.backgroundColor;
+}
+
+
 
